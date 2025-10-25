@@ -1,8 +1,12 @@
 #Say hello to the world
+"""
 print("hello, world")
 
+"""
 #Ask user for their name
+"""
 name = input("What's your name? ")
+"""
 
 #Say hello to user
 
@@ -91,6 +95,20 @@ print(f"Hello, {name}")
 
 # We can even do it while taking input
 
+"""
 address = input ("Where are you from: ").strip().title()
 print(f"I am from {address}")
+
+"""
+
+#split string
+
+name = input("What's your name? ").strip().title()
+
+first, last = name.split()
+
+print(f"Hello {first}")
+print(f"Hey {last}")
+
+
 
