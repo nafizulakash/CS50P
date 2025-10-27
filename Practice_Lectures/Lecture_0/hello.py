@@ -70,6 +70,7 @@ name = name.strip()
 """
 
 # Capitalized very first letter of string
+# f is formatted string. 
 """
 name = name.capitalize()
 print(f"Hello, {name}")
@@ -103,12 +104,98 @@ print(f"I am from {address}")
 
 #split string
 
+"""
 name = input("What's your name? ").strip().title()
 
 first, last = name.split()
 
 print(f"Hello {first}")
 print(f"Hey {last}")
+
+"""
+
+
+                          # ==== function ====
+
+# how to create a function
+# how to pass/ set parameter to a function
+# Scope of veriable (local, global)
+
+"""
+
+def hello (to = "World"): # Setting a default value to the parameter if any value is not passed
+    print(f"Hello, {to}")
+
+hello()
+name = input("What is your name ?: ")
+hello(name)
+
+"""
+
+# We need to define a function before calling it. 
+# but ina project we might need to use so many function. 
+# so the code might look like def, def, def def,. 
+# so instead we define the main function first and 
+# the other necessey funtion later based on our need.
+# and we call the main funtion at the very end of the code
+
+"""
+
+def main ():
+    name1 = input ("What is your name2? : ") # local veriable
+    hello(name1, name2)
+    
+name2 = input ("What is your name1? : ") # Global veriable
+
+def hello(to,x):
+    print(f"Hello, {to},{x}")
+    
+main()
+"""
+
+
+                          # ==== Recursion ====
+
+#recursive function calls it self 
+#Eventually Python will throw a RecursionError 
+# when the maximum recursion depth is reached (~1000 by default).
+
+"""
+
+def main ():
+    name1 = input ("What is your name2? : ") # local veriable
+    hello(name1, name2)
+    main()
+    
+name2 = input ("What is your name1? : ") # Global veriable
+
+def hello(to,x):
+    print(f"Hello, {to},{x}")
+    
+main()
+
+"""
+
+
+# How to use  "Return" in function
+
+def main ():
+    x = int(input("What is the value of X?: "))
+    print(f"The squared value of x is: {square(x)}")
+
+def square(n):
+    return n * n
+    """
+    return n**2  # we can use this 2 method also for square 
+    return pow (n,2)
+    """
+    
+
+main()
+
+
+
+
 
 
 
