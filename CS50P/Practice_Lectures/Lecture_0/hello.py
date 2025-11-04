@@ -179,23 +179,41 @@ main()
 
 # How to use  "Return" in function
 
+"""
+
 def main ():
     x = int(input("What is the value of X?: "))
     print(f"The squared value of x is: {square(x)}")
 
 def square(n):
     return n * n
-    """
-    return n**2  # we can use this 2 method also for square 
-    return pow (n,2)
-    """
+   
+   # return n**2  # we can use this 2 method also for square 
+   # return pow (n,2)
+    
     
 
 main()
 
 
+"""
+
+# Modify global veriable inside a function
+# IF we modify a golbal vaeriable globally it might change other function values too
+
+emoticons = "v.v"
+
+def main():
+    global emoticons # if we dont use this line global veriable won't be modifyable here.
+    say("Is anyone there?") 
+    emoticons = ":D" # python will treat that as a new local variable
+    say("Hey there")
+
+def say (phrase):
+    print(phrase + " " + emoticons)
 
 
+main()
 
 
 
